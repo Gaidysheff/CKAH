@@ -5,12 +5,18 @@
 @use "./mixins.module";
 @use "./fonts.module";
 
-// $border: to.rem(1px solid #ccc);
-
+html,
 body {
-  // font-family: sans-serif;
-  font-family: "Amatic SC", cursive;
-  background: var(#{--body-background-default});
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: to.rem(16px);
+  line-height: to.rem(19px);
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  opacity: 0.5;
+  background: rgb(255, 255, 255);
 }
 
 *,
@@ -19,8 +25,43 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  max-width: to.rem(1200px);
-  margin: 0 auto;
-  padding-top: to.rem(20px);
+// ============== Styles for text, titles and headings ===========
+
+.heading {
+  font-weight: 900;
+  font-size: to.rem(60px);
+  line-height: to.rem(72px);
+  letter-spacing: 0.01em;
+  color: rgb(0, 0, 0);
 }
+
+.over-title {
+  font-weight: 700;
+  font-size: to.rem(14px);
+  line-height: to.rem(17px);
+  color: rgb(0, 0, 0);
+}
+
+.title {
+  font-weight: 500;
+  font-size: to.rem(30px);
+  line-height: to.rem(36px);
+  letter-spacing: 0.01em;
+  color: rgb(0, 0, 0);
+}
+
+.text-body {
+  font-weight: 400;
+  font-size: to.rem(18px);
+  line-height: to.rem(22px);
+  letter-spacing: 0.01em;
+  color: rgb(0, 0, 0);
+}
+
+// ===============================================================
+
+// .container {
+//   max-width: to.rem(1200px);
+//   margin: 0 auto;
+//   padding-top: to.rem(20px);
+// }
