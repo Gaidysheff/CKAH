@@ -1,0 +1,26 @@
+@use "~/node_modules/sass-rem/" as to;
+
+@use "./reset.module";
+@use "./variables.module";
+@use "./mixins.module";
+@use "./fonts.module";
+
+// $border: to.rem(1px solid #ccc);
+
+body {
+  // font-family: sans-serif;
+  font-family: "Amatic SC", cursive;
+  background: var(#{--body-background-default});
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: to.rem(1200px);
+  margin: 0 auto;
+  padding-top: to.rem(20px);
+}
