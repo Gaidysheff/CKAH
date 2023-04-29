@@ -9,11 +9,11 @@
   }
 
   &__logo {
-    padding-left: 60px;
+    padding-left: to.rem(60px);
   }
 
   &__content {
-    padding: 25px 45px;
+    padding: to.rem(25px 45px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

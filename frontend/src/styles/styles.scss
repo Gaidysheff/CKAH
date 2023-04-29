@@ -64,4 +64,6 @@ body {
   max-width: to.rem(1440px);
   margin: 0 auto;
   padding-top: to.rem(20px);
+  display: flex;
+  justify-content: center;
 }
