@@ -73,7 +73,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/images/favicon.ico"),
+          from: path.resolve(__dirname, "src/assets/images/favicon.ico"),
           to: path.resolve(__dirname, "dist"),
         },
       ],
