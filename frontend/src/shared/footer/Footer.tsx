@@ -1,7 +1,6 @@
-import GlobalSvgSelector from "../../assets/GlobalSvgSelector";
-import style from "./Footer.module.scss";
+import FooterSvgSelector from "./FooterSvgSelector";
 
-// import { typography } from "../../styles/typography";
+import style from "./Footer.module.scss";
 
 type Props = {};
 
@@ -11,14 +10,11 @@ const Footer = (props: Props) => {
       <footer className={style.footer}>
         <div className={style.footer__wrapper}>
           <div className={style.footer__logo}>
-            <GlobalSvgSelector id="logo-reverse" />
+            <FooterSvgSelector id="logo-reverse" />
           </div>
           <div className={style.footer__content}>
             <div className={style.footer__contacts}>
-              <div
-                className={style.footer__item}
-                // style={typography.Text_body}
-              >
+              <div className={style.footer__item}>
                 г. Москва, Цветной б-р, 40
               </div>
               <div className={style.footer__item}>+7 495 771 21 11</div>
