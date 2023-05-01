@@ -1,9 +1,18 @@
+import Section_I from "./components/section_I/Section_I";
+import Section_II from "./components/section_II/Section_II";
+import Section_III from "./components/section_III/Section_III";
 import style from "./Home.module.scss";
 
 type Props = {};
 
 const Home = (props: Props) => {
-  return <div>Home</div>;
+  return (
+    <main className={style.wrapper}>
+      <Section_I />
+      <Section_II />
+      <Section_III />
+    </main>
+  );
 };
 
 export default Home;

@@ -25,6 +25,28 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: "Ferry", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: to.rem(60px);
+  line-height: to.rem(72px);
+  letter-spacing: 0.01em;
+  color: rgb(0, 0, 0);
+}
+
+h2 {
+  font-family: "Ferry", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: to.rem(45px);
+  line-height: to.rem(54px);
+  letter-spacing: 0.01em;
+  color: rgb(0, 0, 0);
+}
+
 // ============== Styles for text, titles and headings ===========
 
 .heading {

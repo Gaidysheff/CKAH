@@ -1,6 +1,6 @@
 import HeaderSvgSelector from "./HeaderSvgSelector";
 import { Link } from "react-router-dom";
-import avatar from "../../assets/images/navbar/user_avatar.svg";
+import avatar from "../../assets/images/navbar/user_avatar.png";
 import style from "./Header.module.scss";
 
 type Props = {};

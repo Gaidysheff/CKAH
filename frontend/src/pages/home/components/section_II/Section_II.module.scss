@@ -1,0 +1,9 @@
+.sectionII {
+  display: flex;
+  flex-direction: column;
+  background-color: #cadea9;
+
+  &__heading {
+    margin-bottom: 70px;
+  }
+}
