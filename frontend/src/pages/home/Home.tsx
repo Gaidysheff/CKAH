@@ -10,6 +10,7 @@ const Home = (props: Props) => {
     <main className={style.wrapper}>
       <Section_I />
       <Section_II />
+
       <Section_III />
     </main>
   );

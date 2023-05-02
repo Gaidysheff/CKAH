@@ -5,8 +5,9 @@ type Props = {};
 
 const Section_III = (props: Props) => {
   return (
-    <div className={style.wrapper}>
-      <div></div>Section_III
+    <div className={style.sectionIII}>
+      <h2 className={style.sectionIII__heading}>наши тарифы</h2>
+      <div className={style.sectionIII__wrapper}>BOX</div>
     </div>
   );
 };

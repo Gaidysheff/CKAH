@@ -1,9 +1,12 @@
+@use "~/node_modules/sass-rem/" as to;
+
 .sectionII {
   display: flex;
   flex-direction: column;
   background-color: #cadea9;
+  margin-bottom: to.rem(108px);
 
   &__heading {
-    margin-bottom: 70px;
+    margin-bottom: to.rem(70px);
   }
 }

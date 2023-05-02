@@ -1,0 +1,57 @@
+@use "~/node_modules/sass-rem/" as to;
+
+.carousel {
+  position: relative;
+  margin-bottom: to.rem(70px);
+
+  &__slider 
+  // .slick-list
+  {
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+
+  &__slide {
+    max-width: to.rem(400px);
+    height: to.rem(225px);
+    background: #ffffff;
+    box-shadow: to.rem(0px 0px 20px rgba(0, 0, 0, 0.2));
+    border-radius: to.rem(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: to.rem(34px);
+    margin-right: to.rem(30px);
+  }
+
+  &__icon {
+    padding: to.rem(22px 0px 0px 19px);
+  }
+  &__description {
+    margin-left: to.rem(20px);
+    margin-bottom: to.rem(68px);
+  }
+  &__rightArrowStyles {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: to.rem(-30px);
+    font-size: to.rem(45px);
+    color: #000;
+    opacity: 0.2;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  &__leftArrowStyles {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: to.rem(2px);
+    font-size: to.rem(45px);
+    color: #000;
+    opacity: 0.2;
+    z-index: 1;
+    cursor: pointer;
+  }
+}
