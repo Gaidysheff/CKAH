@@ -1,8 +1,13 @@
 @use "~/node_modules/sass-rem/" as to;
 
 .sectionIII {
-  background-color: #c5f3f9;
-  &__wrapper {
-    padding-top: 70px;
+  min-height: 610px;
+
+  &__heading {
+    margin-bottom: 70px;
+  }
+  &__tariffs {
+    display: flex;
+    justify-content: space-between;
   }
 }

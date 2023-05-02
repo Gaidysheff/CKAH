@@ -2,7 +2,7 @@
 
 .carousel {
   position: relative;
-  margin-bottom: to.rem(70px);
+  margin-bottom: to.rem(50px);
 
   &__slider 
   // .slick-list
@@ -20,8 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: to.rem(34px);
-    margin-right: to.rem(30px);
+    margin: 20px 34px 20px 30px;
   }
 
   &__icon {

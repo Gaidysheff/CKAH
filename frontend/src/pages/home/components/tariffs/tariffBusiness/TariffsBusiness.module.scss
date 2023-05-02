@@ -1,0 +1,121 @@
+.tariff {
+  margin-right: 38px;
+  width: 415px;
+  height: 132px;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  &__header {
+    background: #000000;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &__icon {
+    align-self: center;
+    margin: 0px auto;
+  }
+
+  &__text_container {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px 34px 30px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+  }
+
+  &__body {
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &__price_content {
+    display: flex;
+    flex-direction: column;
+    margin: 33px 0px 59px 30px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  &__amount {
+    display: flex;
+    flex: inline;
+    margin-bottom: 10px;
+  }
+
+  &__current {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-right: 19px;
+  }
+
+  &__previous {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    text-decoration-line: line-through;
+    color: #000000;
+    opacity: 0.5;
+  }
+
+  &__monthly {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+  &__include {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-bottom: 5px;
+    margin-left: 28px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    align-self: center;
+    margin: 55px 0px 24px 0px;
+  }
+}

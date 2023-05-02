@@ -8,6 +8,12 @@ const ButtonSelector = ({ id }: Props) => {
       return <button className={style.shorter}>Запросить данные</button>;
     case "more_details":
       return <button className={style.longer}>Подробнее</button>;
+    case "into_cabinet":
+      return (
+        <button className={style.longer_user_registered}>
+          Перейти в личный кабинет
+        </button>
+      );
     default:
       return null;
   }
