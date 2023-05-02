@@ -1,5 +1,7 @@
 import "./styles/styles.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import { Button, Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
 
 import Auth from "./pages/auth/Auth";
@@ -16,15 +18,20 @@ const App = (props: Props) => {
   return (
     <>
       <Header />
-      <main className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="account" element={<Auth />} />
-          <Route path="objectsearch" element={<Search />} />
-          <Route path="documents" element={<Outcome />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
+      <Button variant="primary" size="lg" className="mt-5 mb-5">
+        TEST
+      </Button>
+      <Container className="container-fluid">
+        <main className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="account" element={<Auth />} />
+            <Route path="objectsearch" element={<Search />} />
+            <Route path="documents" element={<Outcome />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+      </Container>
       <Footer />
     </>
   );
