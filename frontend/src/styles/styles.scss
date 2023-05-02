@@ -84,8 +84,28 @@ h2 {
 
 .container {
   max-width: to.rem(1440px);
+  height: 100%;
   margin: 0 auto;
   padding-top: to.rem(20px);
   display: flex;
   justify-content: center;
+  background-color: #e4fbbc;
 }
+
+// /*! ====================== @media 1460 ========================= */
+
+// @media (max-width: 1460px) {
+//   .container {
+//     max-width: to.rem(1200px);
+//   }
+
+//   h1 {
+//     font-size: to.rem(calc(60px * 0.8));
+//     line-height: to.rem(calc(72px * 0.8));
+//   }
+
+//   h2 {
+//     font-size: to.rem(calc(45px * 0.8));
+//     line-height: to.rem(calc(54px * 0.8));
+//   }
+// }

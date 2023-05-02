@@ -7,11 +7,12 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <main className={style.wrapper}>
-      <Section_I />
-      <Section_II />
-
-      <Section_III />
+    <main className={style.container}>
+      <div className={style.wrapper}>
+        <Section_I />
+        <Section_II />
+        <Section_III />
+      </div>
     </main>
   );
 };

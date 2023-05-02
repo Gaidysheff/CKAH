@@ -1,7 +1,25 @@
 @use "~/node_modules/sass-rem/" as to;
 
+.container {
+  max-width: to.rem(1440px);
+  height: 100%;
+  margin: 0 auto;
+  padding-top: to.rem(20px);
+  display: flex;
+  justify-content: center;
+  background-color: #e4fbbc;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   padding: to.rem(51px 60px 118px 60px);
 }
+
+// /*! ====================== @media 1460 ========================= */
+
+// @media (max-width: 1460px) {
+//   .container {
+//     max-width: to.rem(1200px);
+//   }
+// }

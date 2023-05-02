@@ -15,7 +15,7 @@ const Section_II = (props: Props) => {
       {/* <Carousel /> */}
       <CarouselTest />
       {/* <WhyWeCarousel slides={slides} /> */}
-      <Section_II_SvgSelector id="outcome" />
+      <div  className={style.sectionII__image}><Section_II_SvgSelector id="outcome" /></div>
     </div>
   );
 };

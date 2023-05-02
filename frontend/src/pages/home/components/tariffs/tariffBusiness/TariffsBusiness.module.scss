@@ -1,16 +1,18 @@
+@use "~/node_modules/sass-rem/" as to;
+
 .tariff {
-  margin-right: 38px;
-  width: 415px;
-  height: 132px;
+  margin-right: to.rem(38px);
+  width: to.rem(415px);
+  height: to.rem(132px);
   background: #ffffff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  box-shadow: to.rem(0px 0px 20px rgba(0, 0, 0, 0.2));
+  border-radius: to.rem(10px);
 
   &__header {
     background: #000000;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: to.rem(10px 10px 0px 0px);
     display: flex;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: to.rem(0px 0px 20px rgba(0, 0, 0, 0.2));
   }
 
   &__icon {
@@ -22,21 +24,21 @@
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    padding: 30px 0px 34px 30px;
+    padding: to.rem(30px 0px 34px 30px);
   }
 
   &__title {
     font-weight: 500;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: to.rem(30px);
+    line-height: to.rem(36px);
     letter-spacing: 0.01em;
-    margin-bottom: 10px;
+    margin-bottom: to.rem(10px);
   }
 
   &__subtitle {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: to.rem(18px);
+    line-height: to.rem(22px);
     letter-spacing: 0.01em;
   }
 
@@ -44,41 +46,41 @@
     display: flex;
     background-color: #ffffff;
     flex-direction: column;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: to.rem(0px 0px 10px 10px);
+    box-shadow: to.rem(0px 0px 20px rgba(0, 0, 0, 0.2));
   }
 
   &__price_content {
     display: flex;
     flex-direction: column;
-    margin: 33px 0px 59px 30px;
+    margin: to.rem(33px 0px 59px 30px);
   }
 
   &__description {
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
+    margin-left: to.rem(30px);
   }
 
   &__amount {
     display: flex;
     flex: inline;
-    margin-bottom: 10px;
+    margin-bottom: to.rem(10px);
   }
 
   &__current {
     font-weight: 500;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: to.rem(30px);
+    line-height: to.rem(36px);
     letter-spacing: 0.01em;
     color: #000000;
-    margin-right: 19px;
+    margin-right: to.rem(19px);
   }
 
   &__previous {
     font-weight: 500;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: to.rem(25px);
+    line-height: to.rem(30px);
     letter-spacing: 0.01em;
     text-decoration-line: line-through;
     color: #000000;
@@ -87,35 +89,48 @@
 
   &__monthly {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: to.rem(18px);
+    line-height: to.rem(22px);
     letter-spacing: 0.01em;
     color: #000000;
   }
 
   &__include {
     font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: to.rem(20px);
+    line-height: to.rem(24px);
     letter-spacing: 0.01em;
     color: #000000;
-    margin-bottom: 10px;
+    margin-bottom: to.rem(10px);
   }
 
   &__item {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: to.rem(18px);
+    line-height: to.rem(22px);
     letter-spacing: 0.01em;
     color: #000000;
-    margin-bottom: 5px;
-    margin-left: 28px;
+    margin-bottom: to.rem(5px);
+    margin-left: to.rem(28px);
+    position: relative;
+
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: to.rem(-30px);
+      background: url("../../../../../assets/images//landingPage/icon-yes.svg")
+        no-repeat;
+      width: to.rem(20px);
+      height: to.rem(20px);
     }
   }
 
   &__button {
     align-self: center;
-    margin: 55px 0px 24px 0px;
+    margin: to.rem(55px 0px 24px 0px);
   }
 }

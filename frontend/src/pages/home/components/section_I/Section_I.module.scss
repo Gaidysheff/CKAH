@@ -1,5 +1,8 @@
+@use "~/node_modules/sass-rem/" as to;
+
 .sectionI {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 109px;
 
   &__content {
@@ -9,6 +12,7 @@
 
   &__heading {
     margin-bottom: 20px;
+    white-space: pre-wrap;
   }
 
   &__text {
@@ -25,3 +29,38 @@
     z-index: 0;
   }
 }
+
+// /*! ====================== @media 1460 ========================= */
+
+// @media (max-width: 1460px) {
+//   .container {
+//     max-width: to.rem(1200px);
+//   }
+
+//   .sectionI {
+//     // display: flex;
+//     // margin-bottom: 109px;
+
+//     &__content {
+//       margin-right: 0;
+//       z-index: 2;
+//       flex-shrink: 3;
+//     }
+
+//     &__heading {
+//       margin-bottom: 20px;
+//       white-space: pre-wrap;
+//     }
+
+//     &__text {
+//       font-weight: 400;
+//       font-size: calc(20px * 0.8);
+//       line-height: calc(24px * 0.8);
+//     }
+
+//     &__image {
+//       // width: calc(629px * 1.5);
+//       height: auto;
+//     }
+//   }
+// }
