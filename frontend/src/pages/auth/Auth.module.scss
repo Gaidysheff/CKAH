@@ -1,12 +1,29 @@
-.smth1 {
-  background-color: #bffff8;
-}
-.smth2 {
-  background-color: #ecffbf;
+.auth {
+  &__left {
+    background-color: #bffff8;
+  }
+
+  &__right {
+    background-color: #ecffbf;
+  }
 }
 
 .mycont {
   background-color: #ffbff6;
   width: 1440px;
   margin: 0px auto;
+}
+
+/*! ====================== @media 1320 ========================= */
+
+@media (max-width: 1400px) {
+  .auth {
+    &__left {
+      padding-left: 60px;
+    }
+
+    &__right {
+      padding-right: 60px;
+    }
+  }
 }

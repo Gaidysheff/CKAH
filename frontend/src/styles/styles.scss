@@ -47,6 +47,17 @@ h2 {
   color: rgb(0, 0, 0);
 }
 
+h3 {
+  font-family: "Ferry", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: to.rem(40px);
+  line-height: to.rem(48px);
+  letter-spacing: 0.02em;
+  color: rgb(0, 0, 0);
+}
+
 // ============== Styles for text, titles and headings ===========
 
 .heading {
