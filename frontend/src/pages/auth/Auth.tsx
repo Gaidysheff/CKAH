@@ -12,13 +12,13 @@ const Auth = (props: Props) => {
       <div className={style.mycont}>asas</div>
       <Container fluid="xxl" className={style.auth}>
         <Row>
-          <Col className={style.auth__left} sm={7}>
+          <Col className={style.auth__left} lg={7}>
             <h3>
               Для оформления подписки на тариф, необходимо авторизоваться.
             </h3>
-            <AuthSvgSelector id={"key"} />
+            <div className={style.auth__image}><AuthSvgSelector id={"key"} /></div>
           </Col>
-          <Col className={style.auth__right} sm={5}>
+          <Col className={style.auth__right} lg={5}>
             <SignInUpForm />
           </Col>
         </Row>

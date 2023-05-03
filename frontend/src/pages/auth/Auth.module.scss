@@ -27,3 +27,22 @@
     }
   }
 }
+
+/*! ====================== @media 992 ========================= */
+
+@media (max-width: 992px) {
+  .auth {
+    &__left {
+      padding-left: 60px;
+    }
+
+    &__right {
+      padding-right: 0;
+    }
+
+    &__image {
+      display: none;
+    }
+    
+  }
+}
