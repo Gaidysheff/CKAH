@@ -1,5 +1,9 @@
 @use "~/node_modules/sass-rem/" as to;
 
+.container {
+  max-width: to.rem(1440px);
+}
+
 .sectionII {
   display: flex;
   flex-direction: column;
@@ -13,5 +17,96 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+/*! ====================== @media 1460 ========================= */
+
+@media (max-width: 1460px) {
+  .container {
+    max-width: to.rem(1200px);
+  }
+
+  .sectionII {
+    &__heading {
+      margin-left: to.rem(60px);
+    }
+
+    &__image svg {
+      margin-left: to.rem(30px);
+      width: calc(1307px * 0.8);
+      height: auto;
+    }
+  }
+}
+
+/*! ====================== @media 1220 ========================= */
+
+@media (max-width: 1220px) {
+  .container {
+    max-width: to.rem(1100px);
+
+    .sectionII {
+      &__image svg {
+        margin-left: to.rem(20px);
+        width: calc(1307px * 0.7);
+      }
+    }
+  }
+}
+
+/*! ====================== @media 1110 ========================= */
+
+@media (max-width: 1110px) {
+  .container {
+    max-width: to.rem(1000px);
+  }
+}
+
+/*! ====================== @media 1000 ========================= */
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: to.rem(900px);
+  }
+
+  .sectionII {
+    &__image svg {
+      margin-left: to.rem(0px);
+      width: calc(1307px * 0.6);
+    }
+  }
+}
+
+/*! ====================== @media 900 ========================= */
+
+@media (max-width: 900px) {
+  .container {
+    max-width: to.rem(800px);
+  }
+  .sectionII {
+    &__image svg {
+      margin-left: to.rem(0px);
+      width: calc(1307px * 0.4);
+    }
+  }
+}
+
+/*! ====================== @media 710 ========================= */
+
+@media (max-width: 710px) {
+  .container {
+    max-width: to.rem(600px);
+  }
+
+  .sectionII {
+    align-items: center;
+
+    &__heading {
+      margin-left: 0;
+    }
+    &__image svg {
+      height: 249px;
+    }
   }
 }

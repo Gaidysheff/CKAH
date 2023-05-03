@@ -1,0 +1,43 @@
+@use "~/node_modules/sass-rem/" as to;
+
+.container {
+  height: to.rem(720px);
+}
+.sectionIII {
+  // min-height: 700px;
+
+  &__heading {
+    margin-bottom: 70px;
+  }
+  &__tariffs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/*! ====================== @media 1460 ========================= */
+
+@media (max-width: 1460px) {
+  .sectionIII {
+    &__heading {
+      text-align: center;
+    }
+  }
+}
+
+/*! ====================== @media 1210 ========================= */
+
+@media (max-width: 1210px) {
+  .container {
+    height: to.rem(2050px);
+  }
+  .sectionIII {
+    &__tariffs {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 1420px;
+    }
+  }
+}

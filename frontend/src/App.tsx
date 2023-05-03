@@ -18,20 +18,15 @@ const App = (props: Props) => {
   return (
     <>
       <Header />
-      <Button variant="primary" size="lg" className="mt-5 mb-5">
-        TEST
-      </Button>
-      <Container className="container-fluid">
-        <main className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="account" element={<Auth />} />
-            <Route path="objectsearch" element={<Search />} />
-            <Route path="documents" element={<Outcome />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-      </Container>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="authorization" element={<Auth />} />
+          <Route path="objectsearch" element={<Search />} />
+          <Route path="documents" element={<Outcome />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );

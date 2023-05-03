@@ -1,5 +1,9 @@
 @use "~/node_modules/sass-rem/" as to;
 
+.container {
+  max-width: to.rem(1440px);
+}
+
 .sectionI {
   display: flex;
   justify-content: space-between;
@@ -30,37 +34,90 @@
   }
 }
 
-// /*! ====================== @media 1460 ========================= */
+/*! ====================== @media 1460 ========================= */
 
-// @media (max-width: 1460px) {
-//   .container {
-//     max-width: to.rem(1200px);
-//   }
+@media (max-width: 1460px) {
+  .container {
+    max-width: to.rem(1200px);
+  }
 
-//   .sectionI {
-//     // display: flex;
-//     // margin-bottom: 109px;
+  .sectionI {
+    &__content {
+      margin-right: 0;
+      z-index: 2;
+      flex-shrink: 3;
+    }
 
-//     &__content {
-//       margin-right: 0;
-//       z-index: 2;
-//       flex-shrink: 3;
-//     }
+    &__heading {
+      margin-bottom: 20px;
+      white-space: pre-wrap;
+    }
 
-//     &__heading {
-//       margin-bottom: 20px;
-//       white-space: pre-wrap;
-//     }
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+    }
 
-//     &__text {
-//       font-weight: 400;
-//       font-size: calc(20px * 0.8);
-//       line-height: calc(24px * 0.8);
-//     }
+    &__image img {
+      width: calc(629px * 0.8);
+      height: auto;
+    }
+  }
+}
 
-//     &__image {
-//       // width: calc(629px * 1.5);
-//       height: auto;
-//     }
-//   }
-// }
+/*! ====================== @media 1100 ========================= */
+
+@media (max-width: 1100px) {
+  .container {
+    max-width: to.rem(900px);
+  }
+
+  .sectionI {
+    &__image img {
+      width: calc(629px * 0.7);
+      height: auto;
+    }
+  }
+}
+
+/*! ====================== @media 950 ========================= */
+
+@media (max-width: 950px) {
+  .container {
+    max-width: to.rem(700px);
+  }
+
+  .sectionI {
+    &__image img {
+      width: to.rem(347.18px);
+      height: to.rem(327.31px);
+    }
+  }
+}
+
+/*! ====================== @media 710 ========================= */
+
+@media (max-width: 710px) {
+  .sectionI {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+      max-width: 335px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__text {
+      margin-bottom: 32px;
+    }
+
+    &__button {
+      align-self: center;
+      margin-bottom: 39px;
+    }
+  }
+}

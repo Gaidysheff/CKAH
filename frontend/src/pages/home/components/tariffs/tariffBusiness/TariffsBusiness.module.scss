@@ -134,3 +134,48 @@
     margin: to.rem(55px 0px 24px 0px);
   }
 }
+
+/*! ====================== @media 1460 ========================= */
+
+@media (max-width: 1460px) {
+  .tariff {
+    width: to.rem(360px);
+
+    &__subtitle {
+      font-size: to.rem(14px);
+      line-height: to.rem(18px);
+    }
+
+    &__monthly {
+      font-size: to.rem(14px);
+      line-height: to.rem(18px);
+    }
+
+    &__item {
+      font-size: to.rem(14px);
+      line-height: to.rem(18px);
+    }
+  }
+}
+/*! ====================== @media 1210 ========================= */
+
+@media (max-width: 1210px) {
+  .tariff {
+    margin-right: 0;
+
+    &__subtitle {
+      font-size: to.rem(18px);
+      line-height: to.rem(22px);
+    }
+
+    &__monthly {
+      font-size: to.rem(18px);
+      line-height: to.rem(22px);
+    }
+
+    &__item {
+      font-size: to.rem(18px);
+      line-height: to.rem(22px);
+    }
+  }
+}

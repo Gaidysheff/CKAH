@@ -1,12 +1,13 @@
+@use "~/node_modules/sass-rem/" as to;
 .shorter {
-  width: 335px;
-  height: 59px;
-  padding: 14px 64px 18px 63px;
+  width: to.rem(335px);
+  height: to.rem(59px);
+  padding: to.rem(14px 64px 18px 63px);
   background: #5970ff;
-  border-radius: 5px;
+  border-radius: to.rem(5px);
   font-weight: 500;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: to.rem(22px);
+  line-height: to.rem(27px);
   letter-spacing: 0.01em;
   color: #ffffff;
   transition: 0.5s;
@@ -17,14 +18,14 @@
 }
 
 .longer {
-  width: 355px;
-  height: 59px;
-  padding: 14px 64px 18px 63px;
+  width: to.rem(355px);
+  height: to.rem(59px);
+  padding: to.rem(14px 64px 18px 63px);
   background: #5970ff;
-  border-radius: 5px;
+  border-radius: to.rem(5px);
   font-weight: 500;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: to.rem(22px);
+  line-height: to.rem(27px);
   letter-spacing: 0.01em;
   color: #ffffff;
   transition: 0.5s;
@@ -35,19 +36,35 @@
 }
 
 .longer_user_registered {
-  width: 355px;
-  height: 59px;
-  padding: 14px 64px 18px 63px;
+  width: to.rem(355px);
+  height: to.rem(59px);
+  padding: to.rem(14px 64px 18px 63px);
   background: #d2d2d2;
-  border-radius: 5px;
+  border-radius: to.rem(5px);
   font-weight: 500;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: to.rem(22px);
+  line-height: to.rem(27px);
   letter-spacing: 0.01em;
   color: #000000;
   transition: 0.5s;
 
   &:hover {
     transform: scale(1.05);
+  }
+}
+
+/*! ====================== @media 950 ========================= */
+
+@media (max-width: 950px) {
+  .shorter {
+    width: to.rem(335px);
+    height: to.rem(59px);
+    padding: to.rem(18px 72px 17px 74px);
+    background: #5970ff;
+    border-radius: to.rem(5px);
+    font-weight: 500;
+    font-size: to.rem(20px);
+    line-height: to.rem(24px);
+    letter-spacing: 0.01em;
   }
 }

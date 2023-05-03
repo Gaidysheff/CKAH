@@ -9,6 +9,7 @@
   {
     overflow-x: hidden;
     margin: 0 auto;
+    background-color: #df6b6b;
   }
 
   &__slide {
@@ -54,3 +55,41 @@
     cursor: pointer;
   }
 }
+
+/*! ====================== @media 1460 ========================= */
+
+@media (max-width: 1460px) {
+  .carousel {
+    &__slide {
+      max-width: to.rem(300px);
+      margin: 20px 5px 20px 5px;
+    }
+    &__slider {
+      margin-left: 30px;
+    }
+  }
+}
+/*! ====================== @media 1460 ========================= */
+
+@media (max-width: 1100px) {
+  .carousel {
+    &__slide {
+      max-width: to.rem(250px);
+      // margin: 20px 5px 20px 5px;
+    }
+    &__slider {
+      // margin-left: 30px;
+    }
+  }
+}
+
+/*! ====================== @media 1460 ========================= */
+
+// @media (max-width: 1100px) {
+//   .carousel {
+//     &__slide {
+//       max-width: to.rem(250px);
+//     }
+
+//   }
+// }

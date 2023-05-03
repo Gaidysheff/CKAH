@@ -1,6 +1,5 @@
 import ButtonSelector from "../buttons/ButtonSelector";
 import Section_I_SvgSelector from "./Section_I_SvgSelector";
-import search from "../../../../assets/images/landingPage/image-1.png";
 import style from "./Section_I.module.scss";
 
 type Props = {};
@@ -18,7 +17,9 @@ const Section_I = (props: Props) => {
             Комплексный анализ публикаций, получение данных в формате PDF на
             электронную почту.
           </div>
-          <ButtonSelector id="data_request" />
+          <div className={style.sectionI__button}>
+            <ButtonSelector id="data_request" />
+          </div>
         </div>
         <div className={style.sectionI__image}>
           <Section_I_SvgSelector id="search" />
