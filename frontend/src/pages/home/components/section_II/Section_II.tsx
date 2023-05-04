@@ -13,11 +13,16 @@ const Section_II = (props: Props) => {
     <div className={style.container}>
       <div className={style.sectionII}>
         <h2 className={style.sectionII__heading}>Почему именно мы</h2>
-        {/* <Carousel /> */}
-        <CarouselTest />
-        {/* <WhyWeCarousel slides={slides} /> */}
+        <div className={style.sectionII__carousel}>
+          {/* <Carousel /> */}
+          <CarouselTest />
+          {/* <WhyWeCarousel slides={slides} /> */}
+        </div>
         <div className={style.sectionII__image}>
           <Section_II_SvgSelector id="outcome" />
+        </div>
+        <div className={style.sectionII__image_smaller}>
+          <Section_II_SvgSelector id="Outcome" />
         </div>
       </div>
     </div>

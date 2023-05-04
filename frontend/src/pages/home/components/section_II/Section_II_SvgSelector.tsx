@@ -1,3 +1,4 @@
+import Outcome from "../../../../assets/images/landingPage/Outcome.png";
 import { ReactSVG } from "react-svg";
 import speed from "../../../../assets/images/landingPage/speed.png";
 
@@ -222,6 +223,10 @@ const Section_II_SvgSelector = ({ id }: Props) => {
           />
         </svg>
       );
+      case "Outcome":
+        return (
+          <img src={Outcome} alt="" />
+        );
     case "speed":
       return (
         // <ReactSVG src="../../../../assets/images/landingPage/icon-1.svg" />

@@ -4,6 +4,7 @@
   background-color: #029491;
 
   &__wrapper {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
   }
@@ -13,7 +14,7 @@
   }
 
   &__content {
-    padding: to.rem(25px 45px);
+    padding: to.rem(25px 45px 25px 0);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,5 +34,95 @@
     line-height: to.rem(15px);
     text-align: right;
     color: #ffffff;
+  }
+}
+
+/*! ====================== @media 992 ========================= */
+
+@media (max-width: 992px) {
+  .footer {
+    &__logo {
+      padding-left: to.rem(20px);
+    }
+  }
+}
+
+/*! ====================== @media 700 ========================= */
+
+@media (max-width: 700px) {
+  .footer {
+    &__logo {
+      width: 110px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    &__logo img {
+      height: 60%;
+      width: auto;
+    }
+
+    &__item {
+      font-size: to.rem(12px);
+      line-height: to.rem(15px);
+    }
+
+    &__copyright {
+      font-size: to.rem(10px);
+      line-height: to.rem(13px);
+    }
+  }
+}
+
+/*! ====================== @media 400 ========================= */
+
+@media (max-width: 400px) {
+  .footer {
+    &__logo {
+      width: 110px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-left: to.rem(10px);
+    }
+    &__logo img {
+      height: 60%;
+      width: auto;
+    }
+
+    &__content {
+      padding-right: to.rem(25px);
+    }
+  }
+}
+
+/*! ====================== @media 300 ========================= */
+
+@media (max-width: 300px) {
+  .footer {
+    &__logo {
+      width: 110px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-left: to.rem(5px);
+    }
+    &__logo img {
+      height: 60%;
+      width: auto;
+    }
+
+    &__content {
+      padding-right: to.rem(5px);
+    }
+    &__item {
+      font-size: to.rem(10px);
+      line-height: to.rem(13px);
+    }
+
+    &__copyright {
+      font-size: to.rem(8px);
+      line-height: to.rem(11px);
+    }
   }
 }

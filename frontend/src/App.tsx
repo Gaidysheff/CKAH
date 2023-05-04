@@ -18,15 +18,13 @@ const App = (props: Props) => {
   return (
     <>
       <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="authorization" element={<Auth />} />
-          <Route path="objectsearch" element={<Search />} />
-          <Route path="documents" element={<Outcome />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="authorization" element={<Auth />} />
+        <Route path="objectsearch" element={<Search />} />
+        <Route path="documents" element={<Outcome />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
     </>
   );

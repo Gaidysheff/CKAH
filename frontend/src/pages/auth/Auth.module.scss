@@ -1,29 +1,46 @@
+@use "~/node_modules/sass-rem/" as to;
+
 .auth {
-  &__left {
-    background-color: #bffff8;
-  }
+  margin: to.rem(69px 0px 80px 0px);
 
-  &__right {
-    background-color: #ecffbf;
+  &__image_smaller {
+    display: none;
   }
 }
 
-.mycont {
-  background-color: #ffbff6;
-  width: 1440px;
-  margin: 0px auto;
-}
-
-/*! ====================== @media 1320 ========================= */
+/*! ====================== @media 1400 ========================= */
 
 @media (max-width: 1400px) {
   .auth {
     &__left {
-      padding-left: 60px;
+      padding-left: to.rem(60px);
     }
 
     &__right {
-      padding-right: 60px;
+      padding-right: to.rem(60px);
+    }
+  }
+}
+/*! ====================== @media 1200 ========================= */
+
+@media (max-width: 1200px) {
+  .auth {
+    &__heading {
+      font-size: to.rem(25px);
+      line-height: to.rem(29px);
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+/*! ====================== @media 1100 ========================= */
+
+@media (max-width: 1110px) {
+  .auth {
+    &__heading {
+      font-size: to.rem(22px);
+      line-height: to.rem(26px);
+      letter-spacing: 0.02em;
     }
   }
 }
@@ -33,16 +50,35 @@
 @media (max-width: 992px) {
   .auth {
     &__left {
-      padding-left: 60px;
+      padding-left: 0;
     }
 
     &__right {
       padding-right: 0;
+      margin-left: to.rem(-10px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__form_wrapper {
+      align-self: center;
     }
 
     &__image {
       display: none;
     }
-    
+
+    &__image_wrapper {
+      display: block;
+      margin-top: to.rem(50px);
+    }
+
+    &__image_smaller {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

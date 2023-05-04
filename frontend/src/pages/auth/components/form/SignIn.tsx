@@ -9,13 +9,13 @@ type Props = {};
 
 const SignIn = (props: Props) => {
   const paperStyle = {
-    width: "381px",
-    height: "440px",
+    width: "100%",
+    height: "100%",
     margin: "10px 0 0 0",
     padding: 0,
   };
   const btnStyle = {
-    width: "381px",
+    width: "100%",
     height: "59px",
     fontSize: "22px",
     lineHeight: "27px",
@@ -31,7 +31,7 @@ const SignIn = (props: Props) => {
             <div className="signIn__label">Логин или номер телефона:</div>
             <TextField
               sx={{
-                width: "381px",
+                width: "100%",
                 "& .MuiOutlinedInput-input": { height: "14px" },
               }}
               id="outlined-basic"
@@ -43,7 +43,7 @@ const SignIn = (props: Props) => {
             <div className="signIn__label">Пароль:</div>
             <TextField
               sx={{
-                width: "381px",
+                width: "100%",
                 "& .MuiOutlinedInput-input": { height: "14px" },
               }}
               id="outlined-basic"
@@ -58,7 +58,7 @@ const SignIn = (props: Props) => {
 
         <Box
           sx={{
-            width: "381px",
+            width: "100%",
             height: "62px",
             display: "flex",
             justifyContent: "center",

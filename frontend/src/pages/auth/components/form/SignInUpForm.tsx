@@ -43,18 +43,23 @@ function a11yProps(index: number) {
 }
 
 const boxStyle = {
-  width: 429,
-  height: 523,
+  width: "100%",
+  height: "100%",
   margin: "0 auto",
   background: "#FFFFFF",
   boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.15)",
   borderRadius: "10px",
 };
 const tabStyle = {
-  width: 214,
+  width: "50%",
   color: "#029491",
   fontSize: "16px",
 };
+// const tabStyleSqueeze = {
+//   width: "50%",
+//   color: "#029491",
+//   fontSize: "12px",
+// };
 
 const SignInUpForm = () => {
   const [value, setValue] = React.useState(0);
@@ -64,36 +69,46 @@ const SignInUpForm = () => {
   };
 
   return (
-    <Box sx={{ width: "100%" }} style={boxStyle}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          sx={{
-            "& .MuiTabs-indicator": { background: "#029491" },
-            "& .MuiButtonBase-root": {
-              textTransform: "none",
-            },
-            // "& .MuiTab-root": {
-            //   color: "#C7C7C7",
-            // },
-            // "& .Mui-Selected": {
-            //   color: "#029491",
-            // },
-          }}
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
-          <Tab style={tabStyle} label="Войти" {...a11yProps(0)} />
-          <Tab style={tabStyle} label="Зарегистрироваться" {...a11yProps(1)} />
-        </Tabs>
+    <div className="signInUp__form">
+      <Box
+        className="signInUp__form-head"
+        sx={{ width: "100%" }}
+        style={boxStyle}
+      >
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Tabs
+            sx={{
+              "& .MuiTabs-indicator": { background: "#029491" },
+              "& .MuiButtonBase-root": {
+                textTransform: "none",
+              },
+            }}
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            <Tab
+              // sx={{ typography: { sm: "tabStyle", xs: "tabStyleSqueeze" } }}
+              style={tabStyle}
+              label="Войти"
+              {...a11yProps(0)}
+            />
+            <Tab
+              // sx={{ typography: { sm: "tabStyle", xs: "tabStyleSqueeze" } }}
+              style={tabStyle}
+              label="Зарегистрироваться"
+              {...a11yProps(1)}
+            />
+          </Tabs>
+        </Box>
+        <TabPanel value={value} index={0}>
+          <SignIn />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <SignUp />
+        </TabPanel>
       </Box>
-      <TabPanel value={value} index={0}>
-        <SignIn />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <SignUp />
-      </TabPanel>
-    </Box>
+    </div>
   );
 };
 

@@ -18,6 +18,14 @@
     height: 100%;
     object-fit: contain;
   }
+
+  &__image_smaller {
+    display: none;
+  }
+
+  &__carousel {
+    overflow: hidden;
+  }
 }
 
 /*! ====================== @media 1460 ========================= */
@@ -71,9 +79,13 @@
   }
 
   .sectionII {
-    &__image svg {
-      margin-left: to.rem(0px);
-      width: calc(1307px * 0.6);
+    &__image {
+      display: none;
+    }
+
+    &__image_smaller {
+      display: block;
+      align-self: center;
     }
   }
 }

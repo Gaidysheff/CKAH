@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   padding: to.rem(51px 60px 118px 60px);
-  background-color: #e4fbbc;
 }
 
 /*! ====================== @media 1460 ========================= */
@@ -17,5 +16,13 @@
 @media (max-width: 1460px) {
   .wrapper {
     max-width: to.rem(1200px);
+  }
+}
+
+/*! ====================== @media 540 ========================= */
+
+@media (max-width: 1000px) {
+  .wrapper {
+    min-width: 100vw;
   }
 }

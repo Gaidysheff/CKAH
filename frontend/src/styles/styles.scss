@@ -1,6 +1,6 @@
 @use "~/node_modules/sass-rem/" as to;
 
-@use "./reset.module";
+@use "./reset";
 @use "./variables.module";
 @use "./mixins.module";
 @use "./fonts.module";
@@ -100,7 +100,6 @@ h3 {
   padding-top: to.rem(20px);
   display: flex;
   justify-content: center;
-  background-color: #e4fbbc;
 }
 
 /*! ====================== @media 1460 ========================= */

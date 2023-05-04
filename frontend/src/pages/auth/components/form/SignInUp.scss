@@ -1,36 +1,129 @@
+@use "~/node_modules/sass-rem/" as to;
+
+.signInUp {
+  &__form {
+    width: to.rem(429px);
+    height: to.rem(523px);
+  }
+  &__form-head {
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url("../../../../assets/images/auth/lock.svg");
+      width: to.rem(76px);
+      height: to.rem(93px);
+      display: block;
+      position: absolute;
+      top: -13%;
+      left: -13%;
+    }
+  }
+}
+
 .signIn {
   &__input-group {
-    margin-bottom: 30px;
+    margin-bottom: to.rem(30px);
   }
   &__input-block {
-    margin-bottom: 20px;
+    margin-bottom: to.rem(20px);
   }
   &__label {
+    text-align: start;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: to.rem(16px);
+    line-height: to.rem(19px);
     letter-spacing: 0.02em;
     color: #949494;
-    margin-bottom: 15px;
+    margin-bottom: to.rem(15px);
   }
 
   &__icons {
     display: flex;
   }
   &__icon {
-    width: 96px;
-    height: 31px;
+    width: to.rem(96px);
+    height: to.rem(31px);
     display: flex;
     justify-content: center;
     align-items: center;
     background: #ffffff;
-    border: 1px solid rgba(89, 112, 255, 0.51);
-    border-radius: 3px;
-    margin-right: 10px;
+    border: to.rem(1px solid rgba(89, 112, 255, 0.51));
+    border-radius: to.rem(3px);
+    margin-right: to.rem(10px);
     &:last-child {
       margin-right: 0;
+    }
+  }
+}
+.signUp {
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    border: to.rem(1px solid #515151);
+  }
+}
+
+.image_wrapper {
+  overflow: hidden;
+  object-fit: cover
+  justify-content: center;
+  align-items: center;
+}
+
+.image_wrapper img {
+  height: 100%;
+  width: auto;
+}
+
+/*! ====================== @media 992 ========================= */
+
+@media (max-width: 992px) {
+  .signInUp {
+    &__form {
+      margin-top: to.rem(126px);
+      width: to.rem(335px);
+      height: to.rem(504px);
+    }
+
+    &__form-head {
+      &::before {
+        top: -15%;
+        left: 30%;
+      }
+    }
+  }
+}
+
+/*! ====================== @media 300 ========================= */
+
+@media (max-width: 300px) {
+  .signInUp {
+    &__form {
+      width: to.rem(250px);
+      height: to.rem(600px);
+    }
+  }
+
+  .signIn {
+    &__icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__icon {
+      margin: to.rem(0 0 10px 0);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__label {
+      font-size: to.rem(14px);
+      line-height: to.rem(17px);
     }
   }
 }

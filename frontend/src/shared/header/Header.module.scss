@@ -1,6 +1,8 @@
 @use "~/node_modules/sass-rem/" as to;
 
 .header {
+  overflow: hidden;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
