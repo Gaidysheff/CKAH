@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Auth from "./pages/auth/Auth";
 import Footer from "./shared/footer/Footer";
-import Header from "./shared/header/Header";
+import Header from "./shared/header/HeaderOld";
 import Home from "./pages/home/Home";
 import NotFound from "./pages/notFound/NotFound";
 import Outcome from "./pages/outcome/Outcome";

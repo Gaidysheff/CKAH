@@ -7,13 +7,13 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <main>
+    <>
       <div className={style.wrapper}>
         <Section_I />
         <Section_II />
         <Section_III />
       </div>
-    </main>
+    </>
   );
 };
 
