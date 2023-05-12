@@ -1,4 +1,5 @@
 import ButtonSelector from "../buttons/ButtonSelector";
+import { Link } from "react-router-dom";
 import Section_I_SvgSelector from "./Section_I_SvgSelector";
 import style from "./Section_I.module.scss";
 
@@ -17,9 +18,9 @@ const Section_I = (props: Props) => {
             Комплексный анализ публикаций, получение данных в формате PDF на
             электронную почту.
           </div>
-          <div className={style.sectionI__button}>
+          <Link to="/objectsearch" className={style.sectionI__button}>
             <ButtonSelector id="data_request" />
-          </div>
+          </Link>
         </div>
         <div className={style.sectionI__image}>
           <Section_I_SvgSelector id="search" />
