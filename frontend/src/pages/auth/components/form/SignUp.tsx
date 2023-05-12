@@ -8,8 +8,10 @@ type Props = {};
 
 const SignUp = (props: Props) => {
   return (
-    <div className="signUp__wrapper image_wrapper">
-      <img src={Under_Construction} alt="Page is under construction" />
+    <div className="signUp">
+      <div className="signUp__wrapper">
+        <img src={Under_Construction} alt="Page is under construction" />
+      </div>
     </div>
   );
 };

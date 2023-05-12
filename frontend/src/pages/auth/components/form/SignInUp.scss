@@ -59,10 +59,17 @@
   }
 }
 .signUp {
+  display: flex;
+  justify-content: center;
+
   &__wrapper {
-    width: 100%;
+    width: 300px;
+    height: 300px;
+  }
+
+  &__wrapper img {
     height: 100%;
-    border: to.rem(1px solid #515151);
+    width: auto;
   }
 }
 
@@ -95,6 +102,13 @@
       }
     }
   }
+
+  .signUp {
+    &__wrapper {
+      width: 250px;
+      height: 250px;
+    }
+  }
 }
 
 /*! ====================== @media 300 ========================= */
@@ -124,6 +138,13 @@
     &__label {
       font-size: to.rem(14px);
       line-height: to.rem(17px);
+    }
+  }
+
+  .signUp {
+    &__wrapper {
+      width: 200px;
+      height: 200px;
     }
   }
 }

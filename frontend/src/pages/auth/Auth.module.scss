@@ -1,7 +1,7 @@
 @use "~/node_modules/sass-rem/" as to;
 
 .auth {
-  margin: to.rem(69px 0px 80px 0px);
+  padding: to.rem(170px 60px 118px 60px);
 
   &__image_smaller {
     display: none;

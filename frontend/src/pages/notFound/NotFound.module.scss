@@ -1,1 +1,38 @@
+.found {
+  padding-top: 170px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
 
+  &__wrapper {
+    width: 500px;
+    height: 500px;
+  }
+
+  &__wrapper img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+/*! ====================== @media 600 ========================= */
+
+@media (max-width: 600px) {
+  .found {
+    &__wrapper {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+/*! ====================== @media 350 ========================= */
+
+@media (max-width: 350px) {
+  .found {
+    &__wrapper {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
