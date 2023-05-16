@@ -1,8 +1,9 @@
 import "./Search.scss";
 
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 import React from "react";
+import SearchForm from "./components/SearchForm";
 import SearchSvgSelector from "./SearchSvgSelector";
 
 type Props = {};
@@ -11,7 +12,6 @@ const Search = (props: Props) => {
   return (
     <div className="search">
       <div className="search__wrapper">
-        WRAPPER
         <Row className="search__row">
           <Col className="search__col-1" md={8}>
             <h3 className="search__title">
@@ -21,7 +21,9 @@ const Search = (props: Props) => {
               Задайте параметры поиска. <br /> Чем больше заполните, тем точнее
               поиск
             </div>
-            <div className="search__form">form</div>
+            <div className="search__form">
+              <SearchForm />
+            </div>
           </Col>
           <Col className="search__col-2" md={4}>
             <SearchSvgSelector id="man_rocket" />

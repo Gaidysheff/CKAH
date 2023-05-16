@@ -1,4 +1,5 @@
 @use "~/node_modules/sass-rem/" as to;
+
 .shorter {
   width: to.rem(335px);
   height: to.rem(59px);
@@ -53,6 +54,33 @@
   }
 }
 
+.search {
+  width: to.rem(305px);
+  height: to.rem(59px);
+  padding: to.rem(14px 64px 18px 63px);
+  background: #5970ff;
+  border-radius: to.rem(5px);
+  font-weight: 500;
+  font-size: to.rem(22px);
+  line-height: to.rem(27px);
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin-bottom: 10px;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// ======================== Media 1050 ========================
+
+@media screen and (max-width: 1050px) {
+  .search {
+    width: to.rem(250px);
+  }
+}
+
 /*! ====================== @media 950 ========================= */
 
 @media (max-width: 950px) {
@@ -66,5 +94,21 @@
     font-size: to.rem(20px);
     line-height: to.rem(24px);
     letter-spacing: 0.01em;
+  }
+}
+
+// ======================== Media 880 ========================
+
+@media screen and (max-width: 880px) {
+  .search {
+    width: to.rem(335px);
+  }
+}
+
+// ======================== Media 400 ========================
+
+@media screen and (max-width: 400px) {
+  .search {
+    width: to.rem(250px);
   }
 }

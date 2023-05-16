@@ -14,6 +14,8 @@ const ButtonSelector = ({ id }: Props) => {
           Перейти в личный кабинет
         </button>
       );
+    case "search":
+      return <button className={style.search}>Поиск</button>;
     default:
       return null;
   }
