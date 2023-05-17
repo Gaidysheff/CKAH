@@ -1,0 +1,12 @@
+@use "~/node_modules/sass-rem/" as to;
+
+.tech {
+  width: to.rem(157px);
+  height: to.rem(22px);
+  font-size: to.rem(12px);
+  line-height: to.rem(15px);
+  letter-spacing: 0.02em;
+  color: #000000;
+  background: #ffb64f;
+  border-radius: to.rem(5px);
+}

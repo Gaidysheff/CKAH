@@ -16,6 +16,10 @@ const ButtonSelector = ({ id }: Props) => {
       );
     case "search":
       return <button className={style.search}>Поиск</button>;
+    case "show_more":
+      return <button className={style.outcome}>Показать больше</button>;
+    case "read_in_source":
+      return <button className={style.docu}>Читать в источнике</button>;
     default:
       return null;
   }

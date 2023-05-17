@@ -1,0 +1,272 @@
+@use "~/node_modules/sass-rem/" as to;
+
+.outcome {
+  display: flex;
+  justify-content: center;
+  padding-top: to.rem(120px);
+
+  &__wrapper {
+    width: to.rem(1440px);
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    padding: to.rem(30px);
+    flex-shrink: 0;
+  }
+
+  &__content-title {
+    font-family: "Ferry", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: to.rem(40px);
+    line-height: to.rem(48px);
+    letter-spacing: 0.04em;
+    color: #000000;
+    margin-bottom: to.rem(36px);
+  }
+
+  &__content-subtitle {
+    font-weight: 400;
+    font-size: to.rem(20px);
+    line-height: to.rem(24px);
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+
+  &__image {
+    width: to.rem(533px);
+    height: to.rem(369px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__summary {
+    padding: to.rem(0 30px);
+    margin-bottom: to.rem(107px);
+  }
+
+  &__summary-title {
+    font-family: "Ferry", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: to.rem(30px);
+    line-height: to.rem(36px);
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: to.rem(17px);
+  }
+
+  &__summary-subtitle {
+    font-weight: 400;
+    font-size: to.rem(18px);
+    line-height: to.rem(22px);
+    letter-spacing: 0.02em;
+    color: #949494;
+    margin-bottom: to.rem(27px);
+  }
+
+  &__summary-table {
+    background-color: #f90404;
+    color: white;
+    height: to.rem(158px);
+    max-width: to.rem(1260px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__documents {
+    padding: to.rem(0 30px);
+    margin-bottom: to.rem(109px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__documents-title {
+    font-family: "Ferry", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: to.rem(30px);
+    line-height: to.rem(36px);
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: to.rem(58px);
+  }
+
+  &__list {
+    height: to.rem(694px);
+    width: 100%;
+    margin-bottom: to.rem(54px);
+  }
+
+  &__button {
+    align-self: center;
+  }
+}
+
+// ======================== Media 1000 ========================
+
+@media screen and (max-width: 1000px) {
+  .outcome {
+    &__content {
+      flex-shrink: 1;
+    }
+
+    &__content-title {
+      font-size: calc(to.rem(40px) * 0.9);
+      line-height: calc(to.rem(48px) * 0.9);
+    }
+
+    &__content-subtitle {
+      font-size: calc(to.rem(20px) * 0.9);
+      line-height: calc(to.rem(24px) * 0.9);
+    }
+
+    &__summary-title {
+      font-size: calc(to.rem(30px) * 0.9);
+      line-height: calc(to.rem(36px) * 0.9);
+    }
+
+    &__summary-subtitle {
+      font-size: calc(to.rem(18px) * 0.9);
+      line-height: calc(to.rem(22px) * 0.9);
+    }
+
+    &__documents-title {
+      font-size: calc(to.rem(30px) * 0.9);
+      line-height: calc(to.rem(36px) * 0.9);
+    }
+
+    &__image {
+      width: calc(to.rem(533px) * 0.75);
+      height: calc(to.rem(369px) * 0.75);
+      svg {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}
+
+// ======================== Media 850 ========================
+
+@media screen and (max-width: 850px) {
+  .outcome {
+    &__content {
+      flex-shrink: 1;
+    }
+
+    &__content-title {
+      font-size: calc(to.rem(40px) * 0.7);
+      line-height: calc(to.rem(48px) * 0.7);
+    }
+
+    &__content-subtitle {
+      font-size: calc(to.rem(20px) * 0.7);
+      line-height: calc(to.rem(24px) * 0.7);
+    }
+
+    &__summary-title {
+      font-size: calc(to.rem(30px) * 0.7);
+      line-height: calc(to.rem(36px) * 0.7);
+    }
+
+    &__summary-subtitle {
+      font-size: calc(to.rem(18px) * 0.7);
+      line-height: calc(to.rem(22px) * 0.7);
+    }
+
+    &__documents-title {
+      font-size: calc(to.rem(30px) * 0.7);
+      line-height: calc(to.rem(36px) * 0.7);
+    }
+
+    &__image {
+      width: calc(to.rem(533px) * 0.6);
+      height: calc(to.rem(369px) * 0.6);
+      svg {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}
+
+// ======================== Media 680 ========================
+
+@media screen and (max-width: 680px) {
+  .outcome {
+    &__heading {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: to.rem(60px);
+    }
+
+    &__summary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__summary-table {
+      width: 100%;
+    }
+
+    &__documents-title {
+      align-self: center;
+    }
+  }
+}
+
+// ======================== Media 370 ========================
+
+@media screen and (max-width: 370px) {
+  .outcome {
+    padding-left: 0;
+    padding-right: 0;
+    &__image {
+      width: calc(to.rem(533px) * 0.5);
+      height: calc(to.rem(369px) * 0.5);
+      svg {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &__content-title {
+      font-size: calc(to.rem(40px) * 0.6);
+      line-height: calc(to.rem(48px) * 0.6);
+    }
+
+    &__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__summary {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__documents {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -603,3 +603,4 @@ const SearchSvgSelector = ({ id }: Props) => {
 };
 
 export default SearchSvgSelector;
+

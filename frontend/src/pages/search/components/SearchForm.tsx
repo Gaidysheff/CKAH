@@ -120,9 +120,8 @@ const SearchForm = (props: Props) => {
                   onChange={handleChange}
                 >
                   <MenuItem value={0}>Любая</MenuItem>
-                  <MenuItem value={1}>Низкая</MenuItem>
-                  <MenuItem value={2}>Средняя</MenuItem>
-                  <MenuItem value={3}>Высокая</MenuItem>
+                  <MenuItem value={1}>Позитивная</MenuItem>
+                  <MenuItem value={2}>Негативная</MenuItem>
                 </Select>
               </FormControl>
             </Box>

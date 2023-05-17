@@ -1,0 +1,80 @@
+@use "~/node_modules/sass-rem/" as to;
+
+.docuTemplate {
+  width: 100%;
+  height: to.rem(694px);
+  background: #ffffff;
+  box-shadow: to.rem(0px 0px 20px rgba(0, 0, 0, 0.2));
+  border-radius: to.rem(10px);
+  padding: to.rem(19px 30px 35px 30px);
+  display: flex;
+  flex-direction: column;
+
+  &__source {
+    display: flex;
+    margin-bottom: to.rem(24px);
+  }
+
+  &__date {
+    font-size: to.rem(16px);
+    line-height: to.rem(19px);
+    letter-spacing: 0.02em;
+    color: #949494;
+    margin-right: to.rem(14px);
+  }
+
+  &__link {
+    font-size: to.rem(16px);
+    line-height: to.rem(19px);
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: #949494;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: to.rem(26px);
+    line-height: to.rem(31px);
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: to.rem(18px);
+  }
+
+  &__label {
+    margin-bottom: to.rem(14px);
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: to.rem(20px);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    font-size: to.rem(16px);
+    line-height: to.rem(19px);
+    letter-spacing: 0.02em;
+    color: #000000;
+    opacity: 0.5;
+    margin-bottom: to.rem(46px);
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__button {
+  }
+
+  &__statistics {
+  }
+}
