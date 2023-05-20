@@ -14,6 +14,7 @@
   "author": "Eugene Gaidyshev <gaidysheff@mail.ru>",
   "license": "ISC",
   "dependencies": {
+    "@auth0/auth0-react": "^2.1.0",
     "@babel/polyfill": "^7.12.1",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
@@ -39,6 +40,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-leaflet": "^4.2.1",
+    "react-loader-spinner": "^5.3.4",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
     "react-select": "^5.7.0",
@@ -76,5 +78,8 @@
     "ts-loader": "^9.4.2",
     "webpack": "^5.76.1",
     "webpack-dev-server": "^4.11.1"
+  },
+  "resolutions": {
+    "@types/react": "^18.0.28"
   }
 }

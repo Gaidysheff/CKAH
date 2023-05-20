@@ -96,6 +96,7 @@
 
   &__auth {
     display: flex;
+    align-items: center;
   }
 
   &__user {
@@ -129,6 +130,31 @@
 
   &__avatar {
     border-radius: 50%;
+  }
+
+  &__register {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    opacity: 0.4;
+    margin-right: 40px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 26px;
+      right: -20px;
+      top: -25%;
+      transform: translateY(-500%);
+      background: #029491;
+      opacity: 0.6;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
   }
 }
 

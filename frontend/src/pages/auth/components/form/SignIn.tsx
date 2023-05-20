@@ -1,13 +1,42 @@
 import "./SignInUp.scss";
 
-import { Box, Button, Grid, Link, Paper, TextField } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Button,
+  Grid,
+  Link,
+  Paper,
+  TextField,
+} from "@mui/material";
 
 import AuthSvgSelector from "../../AuthSvgSelector";
-import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 type Props = {};
 
 const SignIn = (props: Props) => {
+  const navigate = useNavigate();
+
+  const [error, setError] = useState("");
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onSubmit = async (event: any) => {
+    event.preventDefault();
+
+    if (!login || !password) {
+      setError("Please enter your username and password.");
+      return;
+    }
+
+    setError("");
+
+    // TODO: send the login request
+    console.log("Logging in...");
+  };
+
   const paperStyle = {
     width: "100%",
     height: "100%",
@@ -25,7 +54,17 @@ const SignIn = (props: Props) => {
 
   return (
     <Grid>
-      <Paper elevation={0} style={paperStyle}>
+      {error && (
+        <Alert severity="error" sx={{ my: 2 }}>
+          {error}
+        </Alert>
+      )}
+      <Paper
+        elevation={0}
+        style={paperStyle}
+        component="form"
+        onSubmit={onSubmit}
+      >
         <div className="signIn__input-group">
           <div className="signIn__input-block">
             <div className="signIn__label">Логин или номер телефона:</div>
@@ -37,6 +76,9 @@ const SignIn = (props: Props) => {
               id="outlined-basic"
               label=""
               variant="outlined"
+              autoComplete="login"
+              value={login}
+              onChange={(e) => setLogin(e.target.value)}
             />
           </div>
           <div className="signIn__input-block">
@@ -49,10 +91,19 @@ const SignIn = (props: Props) => {
               id="outlined-basic"
               label=""
               variant="outlined"
+              type="password"
+              autoComplete="new-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
         </div>
-        <Button variant="contained" style={btnStyle} href="/somewhere">
+        <Button
+          variant="contained"
+          type="submit"
+          style={btnStyle}
+          //  href="/somewhere"
+        >
           Войти
         </Button>
 
@@ -100,4 +151,3 @@ const SignIn = (props: Props) => {
 };
 
 export default SignIn;
-

@@ -16,7 +16,10 @@
     // "noEmit": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "react": ["./node_modules/@types/react"]
+    }
   },
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Recommended",

@@ -1,5 +1,6 @@
 import "./Header.scss";
 
+import { AuthButton } from "../../pages/auth/authButton/AuthButton";
 import HeaderSvgSelector from "./HeaderSvgSelector";
 import { Link } from "react-router-dom";
 import avatar from "../../assets/images/navbar/user_avatar.png";
@@ -35,13 +36,17 @@ const HeaderOld = (props: Props) => {
           </div>
         </div>
         <div className="header__auth">
-          <div className="header__user">
+          <Link to="/authorization" className="header__register">
+            Зарегистрироваться
+          </Link>
+          <AuthButton />
+          {/* <div className="header__user">
             <div className="header__name">Алексей А.</div>
             <Link className="header__out" to="/">
               Выйти
             </Link>
           </div>
-          <img className="header__avatar" src={avatar} alt="User's avatar" />
+          <img className="header__avatar" src={avatar} alt="User's avatar" /> */}
         </div>
         <div className="header__burger">
           <span />
