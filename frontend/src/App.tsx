@@ -11,6 +11,7 @@ import Home from "./pages/home/Home";
 import NotFound from "./pages/notFound/NotFound";
 import Outcome from "./pages/outcome/Outcome";
 import Search from "./pages/search/Search";
+import User from "./pages/auth/components/Users";
 
 type Props = {};
 
@@ -18,13 +19,16 @@ const App = (props: Props) => {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="authorization" element={<Auth />} />
-        <Route path="objectsearch" element={<Search />} />
-        <Route path="documents" element={<Outcome />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="authorization" element={<Auth />} />
+          <Route path="objectsearch" element={<Search />} />
+          <Route path="documents" element={<Outcome />} />
+          <Route path="user" element={<User />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );

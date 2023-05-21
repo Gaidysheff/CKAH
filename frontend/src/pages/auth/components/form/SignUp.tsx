@@ -1,17 +1,9 @@
 import "./SignInUp.scss";
 
-import {
-  Alert,
-  Box,
-  Button,
-  Container,
-  Link,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Alert, Box, Button, Link, TextField } from "@mui/material";
 
-import React from "react";
-import Under_Construction from "../../../../assets/images/notFound/Page_Under_Construction.jpg";
+import { createUser } from "../../../../firebase";
+import { startSession } from "../../../../storage/session";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -21,6 +13,7 @@ const SignUp = (props: Props) => {
   const navigate = useNavigate();
 
   const [error, setError] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
@@ -39,8 +32,14 @@ const SignUp = (props: Props) => {
 
     setError("");
 
-    // TODO: send the register request
-    console.log("Registering...");
+    try {
+      let registerResponse = await createUser(email, password);
+      startSession(registerResponse.user);
+      navigate("/user");
+    } catch (error: any) {
+      console.error(error.message);
+      setError(error.message);
+    }
   };
 
   return (
@@ -53,12 +52,22 @@ const SignUp = (props: Props) => {
         )}
         <Box component="form" onSubmit={onSubmit}>
           <TextField
+            label="username"
+            variant="outlined"
+            autoComplete="email"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            sx={{ mt: 1 }}
+            fullWidth
+            size="small"
+          />
+          <TextField
             label="Email"
             variant="outlined"
             autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            sx={{ mt: 1 }}
+            sx={{ mt: 3 }}
             fullWidth
             size="small"
           />

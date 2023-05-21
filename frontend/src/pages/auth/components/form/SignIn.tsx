@@ -11,6 +11,8 @@ import {
 } from "@mui/material";
 
 import AuthSvgSelector from "../../AuthSvgSelector";
+import { signInUser } from "../../../../firebase";
+import { startSession } from "../../../../storage/session";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -20,21 +22,27 @@ const SignIn = (props: Props) => {
   const navigate = useNavigate();
 
   const [error, setError] = useState("");
-  const [login, setLogin] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const onSubmit = async (event: any) => {
     event.preventDefault();
 
-    if (!login || !password) {
+    if (!username || !password) {
       setError("Please enter your username and password.");
       return;
     }
 
     setError("");
 
-    // TODO: send the login request
-    console.log("Logging in...");
+    try {
+      let loginResponse = await signInUser(username, password);
+      startSession(loginResponse.user);
+      navigate("/user");
+    } catch (error: any) {
+      console.error(error.message);
+      setError(error.message);
+    }
   };
 
   const paperStyle = {
@@ -76,9 +84,9 @@ const SignIn = (props: Props) => {
               id="outlined-basic"
               label=""
               variant="outlined"
-              autoComplete="login"
-              value={login}
-              onChange={(e) => setLogin(e.target.value)}
+              autoComplete="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="signIn__input-block">
