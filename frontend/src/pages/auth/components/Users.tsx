@@ -1,7 +1,8 @@
 import "./Users.scss";
 
 import { Button, Container, Typography } from "@mui/material";
-import { endSession, getSession, isLoggedIn } from "../../../storage/session";
+import { endSession, getSession } from "../../../storage/session";
+import { getUser, isLoggedIn, logOut } from "../../../parse";
 import { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
@@ -12,21 +13,26 @@ const Users = (props: Props) => {
   let navigate = useNavigate();
 
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
-    if (!isLoggedIn()) {
-      navigate("/login");
-    }
+    (async () => {
+      let loggedIn = await isLoggedIn();
+      if (!loggedIn) {
+        navigate("/login");
+      }
 
-    let session: any = getSession();
-    setEmail(session.email);
+      let user = await getUser();
+      setEmail(user.getEmail());
+      setUsername(user.getUsername());
 
-    console.log("Your access token is: " + session.accessToken);
+      console.log("Your session token is: " + user.getSessionToken());
+    })();
   }, [navigate]);
 
-  const onLogout = () => {
-    endSession();
-    navigate("/login");
+  const onLogout = async () => {
+    await logOut();
+    navigate("/");
   };
 
   return (
@@ -36,7 +42,10 @@ const Users = (props: Props) => {
         <Typography variant="h6" component="h1" textAlign="center" gutterBottom>
           You're logged in as:
         </Typography>
-        <Typography variant="h5" component="h1" textAlign="center" gutterBottom>
+        <Typography variant="h5" component="h6" textAlign="center" gutterBottom>
+          {username}
+        </Typography>
+        <Typography variant="h5" component="h6" textAlign="center" gutterBottom>
           {email}
         </Typography>
         <Typography variant="h6" component="h6" textAlign="center" gutterBottom>

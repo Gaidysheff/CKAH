@@ -2,8 +2,7 @@ import "./SignInUp.scss";
 
 import { Alert, Box, Button, Link, TextField } from "@mui/material";
 
-import { createUser } from "../../../../firebase";
-import { startSession } from "../../../../storage/session";
+import { doUserRegistration } from "../../../../parse";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -32,9 +31,10 @@ const SignUp = (props: Props) => {
 
     setError("");
 
+    let username = email.split("@")[0];
     try {
-      let registerResponse = await createUser(email, password);
-      startSession(registerResponse.user);
+      let user = await doUserRegistration(username, password);
+      user.setEmail(email).save();
       navigate("/user");
     } catch (error: any) {
       console.error(error.message);
