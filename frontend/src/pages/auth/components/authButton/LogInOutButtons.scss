@@ -1,0 +1,15 @@
+.auth_btn {
+  width: 65px;
+  height: 26px;
+  background: #7ce3e1;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: #000000;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

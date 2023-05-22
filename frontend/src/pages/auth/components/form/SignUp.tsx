@@ -44,7 +44,7 @@ const SignUp = (props: Props) => {
 
   return (
     <div className="signUp">
-      <div className="signUp__wrapper">
+      <div className="signUp__wrapper" id="register">
         {error && (
           <Alert severity="error" sx={{ my: 2 }}>
             {error}

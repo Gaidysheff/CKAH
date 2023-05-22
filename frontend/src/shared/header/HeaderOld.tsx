@@ -1,13 +1,28 @@
 import "./Header.scss";
 
-import { AuthButton } from "../../pages/auth/authButton/AuthButton";
 import HeaderSvgSelector from "./HeaderSvgSelector";
 import { Link } from "react-router-dom";
+import LoginButton from "../../pages/auth/components/authButton/LoginButton";
 import avatar from "../../assets/images/navbar/user_avatar.png";
+import { useState } from "react";
 
-type Props = {};
+// import LogoutButton from "../../pages/auth/components/authButton/LogoutButton";
+
+type Props = {
+  isLoggedIn?: any;
+};
 
 const HeaderOld = (props: Props) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+  // const isLoggedIn: Props = props.isLoggedIn;
   return (
     <header className="header">
       <div className="header__wrapper">
@@ -25,28 +40,47 @@ const HeaderOld = (props: Props) => {
             FAQ
           </Link>
         </nav>
-        <div className="header__infobox">
-          <div className="header__infobox_items">
-            <div className="header__infobox_item">Использовано компаний</div>
-            <div className="header__infobox_item">Лимит по компаниям</div>
+        {isLoggedIn && (
+          <div className="header__infobox">
+            <div className="header__infobox_items">
+              <div className="header__infobox_item">Использовано компаний</div>
+              <div className="header__infobox_item">Лимит по компаниям</div>
+            </div>
+            <div className="header__infobox_data">
+              <div className="header__infobox_figure">34</div>
+              <div className="header__infobox_figure">100</div>
+            </div>
           </div>
-          <div className="header__infobox_data">
-            <div className="header__infobox_figure">34</div>
-            <div className="header__infobox_figure">100</div>
+        )}
+        <div>
+          <div className="header__auth">
+            {!isLoggedIn ? (
+              <div>
+                <Link to="/authorization" className="header__register">
+                  Зарегистрироваться
+                </Link>
+                <Link to="/authorization">
+                  <button onClick={handleLogin}>
+                    <LoginButton />
+                  </button>
+                </Link>
+              </div>
+            ) : (
+              <div className="header__auth">
+                <div className="header__user">
+                  <div className="header__name">Алексей А.</div>
+                  <Link className="header__out" to="/">
+                    <button onClick={handleLogout}>Выйти</button>
+                  </Link>
+                </div>
+                <img
+                  className="header__avatar"
+                  src={avatar}
+                  alt="User's avatar"
+                />
+              </div>
+            )}
           </div>
-        </div>
-        <div className="header__auth">
-          <Link to="/authorization" className="header__register">
-            Зарегистрироваться
-          </Link>
-          <AuthButton />
-          {/* <div className="header__user">
-            <div className="header__name">Алексей А.</div>
-            <Link className="header__out" to="/">
-              Выйти
-            </Link>
-          </div>
-          <img className="header__avatar" src={avatar} alt="User's avatar" /> */}
         </div>
         <div className="header__burger">
           <span />
