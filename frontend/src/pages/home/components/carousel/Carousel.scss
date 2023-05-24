@@ -1,17 +1,8 @@
 @use "~/node_modules/sass-rem/" as to;
 
 .carousel {
-  position: relative;
-  margin-bottom: to.rem(50px);
-
-  &__slider 
-  // .slick-list
-  {
-    overflow-x: hidden;
-    margin: 0 auto;
-    background-color: #df6b6b;
-  }
-
+  display: flex;
+  justify-content: center;
   &__slide {
     max-width: to.rem(400px);
     height: to.rem(225px);
@@ -23,7 +14,6 @@
     justify-content: space-between;
     margin: 20px 34px 20px 30px;
   }
-
   &__icon {
     padding: to.rem(22px 0px 0px 19px);
   }
@@ -31,10 +21,37 @@
     margin-left: to.rem(20px);
     margin-bottom: to.rem(68px);
   }
-  &__rightArrowStyles {
+}
+
+.container {
+  // background-color: #71f771;
+  width: 90vw;
+  flex-shrink: 1;
+  padding: 40px;
+  position: relative;
+}
+
+.slick {
+  &-slider {
+    // background-color: #71f7f7;
+    width: 100%;
+  }
+  &-next:before {
+    content: "❱";
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+    right: to.rem(-10px);
+  }
+  &-prev:before {
+    content: "❰";
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: to.rem(2px);
+  }
+  &-prev:before,
+  &-next:before {
     right: to.rem(-10px);
     font-size: to.rem(45px);
     color: #000;
@@ -42,54 +59,77 @@
     z-index: 1;
     cursor: pointer;
   }
+}
 
-  &__leftArrowStyles {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    left: to.rem(2px);
-    font-size: to.rem(45px);
-    color: #000;
-    opacity: 0.2;
-    z-index: 1;
-    cursor: pointer;
+/*! =============================================== */
+@media (max-width: 1530px) {
+  .carousel {
+    &__slide {
+      max-width: to.rem(330px);
+    }
   }
 }
 
-/*! ====================== @media 1460 ========================= */
-
-@media (max-width: 1460px) {
+@media (max-width: 1300px) {
   .carousel {
     &__slide {
       max-width: to.rem(300px);
-      margin: 20px 5px 20px 5px;
-    }
-    &__slider {
-      margin-left: 30px;
     }
   }
 }
-/*! ====================== @media 1460 ========================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .carousel {
     &__slide {
       max-width: to.rem(250px);
-      // margin: 20px 5px 20px 5px;
-    }
-    &__slider {
-      // margin-left: 30px;
     }
   }
 }
 
-/*! ====================== @media 1460 ========================= */
+@media (max-width: 1050px) {
+  .carousel {
+    &__slide {
+      max-width: to.rem(330px);
+    }
+  }
+}
 
-// @media (max-width: 1100px) {
-//   .carousel {
-//     &__slide {
-//       max-width: to.rem(250px);
-//     }
+@media (max-width: 900px) {
+  .carousel {
+    &__slide {
+      max-width: to.rem(300px);
+    }
+  }
+}
 
-//   }
-// }
+@media (max-width: 840px) {
+  .carousel {
+    &__slide {
+      max-width: to.rem(250px);
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .carousel {
+    &__slide {
+      max-width: 90%;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .carousel {
+    &__slide {
+      max-width: 85%;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .carousel {
+    &__slide {
+      max-width: 80%;
+    }
+  }
+}
