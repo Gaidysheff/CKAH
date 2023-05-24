@@ -2,6 +2,7 @@ import "./Outcome.scss";
 
 import ButtonSelector from "../home/components/buttons/ButtonSelector";
 import Documents from "./components/documents/Documents";
+import { Link } from "react-router-dom";
 import OutcomeSvgSelector from "./OutcomeSvgSelector";
 import React from "react";
 
@@ -38,9 +39,9 @@ const Outcome = (props: Props) => {
             <div className="outcome__list">
               <Documents />
             </div>
-            <a href="/go_to_somewhere" className="outcome__button">
+            <Link to="/go_to_somewhere" className="outcome__button">
               <ButtonSelector id="show_more" />
-            </a>
+            </Link>
           </section>
         </div>
       </div>

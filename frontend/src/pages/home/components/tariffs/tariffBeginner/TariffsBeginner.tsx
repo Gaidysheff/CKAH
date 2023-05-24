@@ -1,6 +1,7 @@
 import "./TariffsBeginner.scss";
 
 import ButtonSelector from "../../buttons/ButtonSelector";
+import { Link } from "react-router-dom";
 import TariffsSvgSelector from "../TariffsSvgSelector";
 
 type Props = {};
@@ -35,9 +36,9 @@ const TariffBeginner = (props: Props) => {
             <li className="tariff__item">Поддержка 24/7</li>
           </ul>
         </div>
-        <div className="tariff__button">
+        <Link to="/go_to_somewhere" className="tariff__button">
           <ButtonSelector id="more_details" />
-        </div>
+        </Link>
       </div>
     </div>
   );

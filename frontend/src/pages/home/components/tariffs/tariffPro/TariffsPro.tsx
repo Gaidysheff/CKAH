@@ -1,4 +1,5 @@
 import ButtonSelector from "../../buttons/ButtonSelector";
+import { Link } from "react-router-dom";
 import TariffsSvgSelector from "../TariffsSvgSelector";
 import style from "./TariffsPro.module.scss";
 
@@ -37,9 +38,9 @@ const TariffPro = (props: Props) => {
               </li>
             </ul>
           </div>
-          <div className={style.tariff__button}>
+          <Link to="/go_to_somewhere" className={style.tariff__button}>
             <ButtonSelector id="more_details" />
-          </div>
+          </Link>
         </div>
       </div>
     </>

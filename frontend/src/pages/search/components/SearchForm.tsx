@@ -11,6 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import InputLabel from "@mui/material/InputLabel";
+import { Link } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 
@@ -338,7 +339,9 @@ const SearchForm = (props: Props) => {
             </FormGroup>
           </div>
           <div className="searchForm__button">
-            <ButtonSelector id="search" />
+            <Link to="/documents">
+              <ButtonSelector id="search" />
+            </Link>
             <p className="searchForm__footnote">
               * Обязательные к заполнению поля
             </p>

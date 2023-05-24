@@ -1,4 +1,5 @@
 import ButtonSelector from "../../buttons/ButtonSelector";
+import { Link } from "react-router-dom";
 import TariffsSvgSelector from "../TariffsSvgSelector";
 import style from "./TariffsBusiness.module.scss";
 
@@ -39,9 +40,9 @@ const TariffBusiness = (props: Props) => {
               <li className={style.tariff__item}>Приоритетная поддержка</li>
             </ul>
           </div>
-          <div className={style.tariff__button}>
+          <Link to="/go_to_somewhere" className={style.tariff__button}>
             <ButtonSelector id="more_details" />
-          </div>
+          </Link>
         </div>
       </div>
     </>
